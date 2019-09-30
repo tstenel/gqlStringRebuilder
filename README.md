@@ -9,10 +9,10 @@ exemple:
 import gql from 'graphql-tag';
 import stringRebuilder from 'gqlStringRebuilder';
 
-const query = gql`{ Cars(brand: "Honda"} { id, name, price } }`;
+const query = gql`{ Cars(brand: "Honda") { id, name, price } }`;
 const queryString = stringRebuilder(query);
 
 console.log(queryString);
-----> { Cars(brand: "Honda"} { id, name, price } }
+----> { Cars(brand: "Honda") { id, name, price } }
 
 ```

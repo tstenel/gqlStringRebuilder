@@ -1,0 +1,24 @@
+{
+  "name": "gql-string-rebuilder",
+  "version": "1.0.0",
+  "description": "rebuild graphql query string from gql object",
+  "main": "gqlStringRebuilder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tstenel/gqlStringRebuilder.git"
+  },
+  "keywords": [
+    "graphql",
+    "query",
+    "string"
+  ],
+  "author": "Tanguy Stenel",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/tstenel/gqlStringRebuilder/issues"
+  },
+  "homepage": "https://github.com/tstenel/gqlStringRebuilder#readme"
+}

@@ -1,7 +1,7 @@
 # gqlStringRebuilder
 Graphql string rebuilder
 
-This module is used to get the query string from a querr object obtained from graphql-tag
+This module is used to get the query string from a query object obtained from graphql-tag
 
 exemple: 
 

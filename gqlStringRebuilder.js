@@ -22,6 +22,9 @@ function getListValues(values) {
 function parseSelection(selection, query) {
     let tmpQuery = query;
 
+    if (selection.alias !== undefined) {
+        tmpQuery += `${selection.alias.value}: `;
+    }
     tmpQuery += selection.name.value;
     if (selection.arguments.length) {
 	tmpQuery += '(';

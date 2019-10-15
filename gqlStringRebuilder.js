@@ -4,14 +4,15 @@ function getListValues(values) {
     for (let i = 0; i < values.length; i += 1) {
 	const separators = ['', ''];
 	if (values[i].kind === 'StringValue') {
-	    separators[0] = '"';
-	    separators[1] = '"';
-	}
-	if (values[i].kind === 'ListValue') {
-	    listValues = `${listValues}[${getListValues(values[i].values)}]`;
-	} else {
-	    listValues = `${listValues}${separators[0]}${values[i].value}${separators[1]}`;
-	}
+     	  separators[0] = '"';
+      	  separators[1] = '"';
+    	} else if (values[i].kind === 'ListValue') {
+      	  listValues = `${listValues}[${getListValues(values[i].values)}]`;
+    	} else if (values[i].kind === 'Variable') {
+      	  listValues = `${listValues}$${values[i].value}`;
+    	} else {
+	  listValues = `${listValues}${separators[0]}${values[i].value}${separators[1]}`;
+    	}
 	if (i < values.length - 1) {
 	    listValues = `${listValues},`;
 	}

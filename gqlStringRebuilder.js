@@ -37,7 +37,9 @@ function parseSelection(selection, query) {
 		separators[0] = '[';
 		separators[1] = ']';
 		tmpQuery = `${tmpQuery}${argument.name.value}: [${getListValues(argument.value.values)}]`;
-	    } else {
+	    } else if (argument.value.kind === 'Variable') {
+        	tmpQuery = `${tmpQuery}${argument.name.value}: $${argument.value.name.value}`;
+      	    } else {
 		if (argument.value.kind === 'StringValue') {
 		    separators[0] = '"';
 		    separators[1] = '"';
